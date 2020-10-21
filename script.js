@@ -1,46 +1,49 @@
 // Assignment Code
+
+// Defines arrays for each character type containing those characters
 var lowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 var numeric = ["1","2","3","4","5","6","7","8","9"]
 var special = [" ","!","\"","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","?","@","[","\\","]","^","_","`","{","|","}","~"]
 
 function generatePassword() {
-    // Selecting password length
+    // Defines password length variable
     var lengthString = 0;
     var length = parseInt(lengthString);
 
     while (length < 8 || length > 128) {
-
+        // Prompts user to enter password length and convert string to an integer
         lengthString = prompt("How long would you like your password to be? (must be between 8 and 128 characters)");
         length = parseInt(lengthString);
 
+        // Alerts user if password is too short
         if (length < 8) {
         alert("Requested password length is too short. Please try again.")
         }
 
+        // Alerts user if password is too long
         if (length > 128) {
         alert("Requested password length is too long. Please try again.")
         }
-
     }
 
-    // Selecting types of characters
+    // Prompts user to confirm what character types to include
     while (lowercaseConfirm !== true && uppercaseConfirm!== true && numericConfirm !== true && specialConfirm !== true) {
         var lowercaseConfirm = confirm("Would you like it to include lowercase characters?");
         var uppercaseConfirm = confirm("Would you like it to include uppercase characters?")
         var numericConfirm = confirm("Would you like it to include numeric characters?");
         var specialConfirm = confirm("Would you like it to include special characters?");
 
-        //Validation of whether at least one character type is selected
+        //Validate that at least one character type is selected
         if (lowercaseConfirm === false && uppercaseConfirm === false && numericConfirm === false && specialConfirm ===false) {
             alert ("You must select at least one character type.");
         }
     }
 
-    // Defining variable password
+    // Defines variable password
     var password = "";
 
-    // Select for chosen character types until password is equal to chosen password length
+    // Adds chosen character types to string until password is equal to chosen password length
     while (password.length < length) {
 
         if (lowercaseConfirm == true && password.length < length) {
@@ -60,6 +63,7 @@ function generatePassword() {
         }
     }
 
+    // Returns variable password when function is called
     return password;
 }
 
