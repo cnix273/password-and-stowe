@@ -24,10 +24,10 @@ Repository structure must be maintained for proper usage of the index.html file.
 
 Deployed application: https://cnix273.github.io/password-and-stowe/
 
-**The following images show the web application apperance and functionality:**!
-[Site Appearance](https://github.com/cnix273/password-and-stowe/blob/main/assets/images/Screenshot1.png)
-[Site Functionality 1](https://github.com/cnix273/password-and-stowe/blob/main/assets/images/Screenshot2.png)
-[Site Functionality 2](https://github.com/cnix273/password-and-stowe/blob/main/assets/images/Screenshot3.png)
+**The following images show web application apperance and functionality:**
+![Site Appearance](https://github.com/cnix273/password-and-stowe/blob/main/assets/images/Screenshot1.png)
+![Site Functionality 1](https://github.com/cnix273/password-and-stowe/blob/main/assets/images/Screenshot2.png)
+![Site Functionality 2](https://github.com/cnix273/password-and-stowe/blob/main/assets/images/Screenshot3.png)
 
 ## Credits
 
