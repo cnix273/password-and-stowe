@@ -7,26 +7,53 @@ var special = [" ","!","\"","#","$","%","&","'","(",")","*","+",",","-",".","/",
 function generatePassword() {
   // Selecting password length
     
-  while (length < 8 || length > 128) {  
-    var lengthString = prompt("How long would you like your password to be? (must be between 8 and 128 characters)");
-    var length = parseInt(lengthString);
+    while (length < 8 || length > 128) {  
+        var lengthString = prompt("How long would you like your password to be? (must be between 8 and 128 characters)");
+        var length = parseInt(lengthString);
 
-    if (length < 8) {
-      alert("Requested password length is too short. Please try again.")
+        if (length < 8) {
+        alert("Requested password length is too short. Please try again.")
+        }
+
+        if (length > 128) {
+        alert("Requested password length is too long. Please try again.")
+        }
     }
 
-    if (length > 128) {
-      alert("Requested password length is too long. Please try again.")
-    }
-  }
-  
   // Selecting types of characters
-  while (lowercaseConfirm !== true && uppercaseConfirm!== true && numericConfirm !== true && specialConfirm !== true) {
-    var lowercaseConfirm = confirm("Would you like it to include lowercase characters?");
-    var uppercaseConfirm = confirm("Would you like it to include uppercase characters?")
-    var numericConfirm = confirm("Would you like it to include numeric characters?");
-    var specialConfirm = confirm("Would you like it to include special characters?");
-  }
+    while (lowercaseConfirm !== true && uppercaseConfirm!== true && numericConfirm !== true && specialConfirm !== true) {
+        var lowercaseConfirm = confirm("Would you like it to include lowercase characters?");
+        var uppercaseConfirm = confirm("Would you like it to include uppercase characters?")
+        var numericConfirm = confirm("Would you like it to include numeric characters?");
+        var specialConfirm = confirm("Would you like it to include special characters?");
+
+        //Validation of whether at least one character type is selected
+        if (lowercaseConfirm === false && uppercaseConfirm === false && numericConfirm === false && specialConfirm ===false) {
+            alert ("You must select at least one character type.");
+        }
+    }
+
+    if (lowercaseConfirm) {
+        var password = password.concat(lowercase);
+    }
+        
+    if (uppercaseConfirm) {
+        password = password.concat(uppercase);
+    }
+        
+    if (numericConfirm) {
+        password = password.concat(numberic);
+    }
+        
+    if (specialConfirm) {
+        password = password.concat(special);
+    }
+
+    var passwordArray;
+    for (i = 0; i < length; i++) {
+        passwordText[i] = password[Math.floor(Math.random() * length)];
+    }
+}
 
 var generateBtn = document.querySelector("#generate");
 
