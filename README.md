@@ -2,20 +2,22 @@
 
 ## Summary
 
-This site serves to generate a unique password for employees based on criteria selecte for by the employee. The password length is specified by the user and can range from 8 to 128 characters. The password can contain up to four character types: lowercase, uppercase, numeric, and special characters. The types of characters included in the password are also specified by the user. The site is responsive to ensure that the site renders well on a variety of devices and window or screen sizes.
+This site serves to generate a unique password for employees based on criteria selected for by the employee. The password length is specified by the user and can range from 8 to 128 characters. The password can contain up to four character types: lowercase, uppercase, numeric, and special characters. The types of characters included in the password are also specified by the user.
+
+This site is responsive to ensure that the site renders well on a variety of devices and window or screen sizes.
 
 ## Installation
 
 Clone the repository from github.
 
-* git clone https://github.com/cnix273/responsive_design.git
+* git clone https://github.com/cnix273/password-and-stowe.git
 
 ## Usage
 
 **Technologies Used**
 * HTML - Used to create the structure of the site
 * CSS - Used to style the HTML Elements
-* JavaScript - Used to add functionality and user interface to the site
+* JavaScript - Used to make the site dynamic
 * GitHub - Hosts the repository that can be deployed to GitHub Pages
 
 The repository includes the index.html, script.js, and style.css files and the "assets" directory, which runs adjacent. Within the asset directory are the "css", "js", and "images" directories. The "css" directory contains the style.css file, the "js" directory contains the script.js file, and the "images" directory contains three image files.
